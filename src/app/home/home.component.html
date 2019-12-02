@@ -1,0 +1,14 @@
+<div class="form-main">
+    <h6 class="text-center">Paste your URL in the below box</h6>
+    <input type="email" id="inputEmail" class="form-control" placeholder="paste here and click generate" required="" autofocus="" [(ngModel)]="sourceUrl">
+    <div class="mb-3">
+        <button [disabled]="!sourceUrl" class="btn btn-primary btn-block" type="submit" (click)="generateUrl()">Generate</button>
+    </div>
+    <div class="mb-3">
+        <span class="url-hover" *ngIf="newUrl" (click)="navigate()">{{newUrl}}</span>
+    </div>
+
+    <span class="note" *ngIf="newUrl"><sup>**</sup>please click on the link to open</span>
+
+
+</div>
