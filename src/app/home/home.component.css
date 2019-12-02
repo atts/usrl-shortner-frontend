@@ -1,0 +1,29 @@
+.form-main {
+    position: fixed;
+    width: 330px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mb-3,
+.my-3 {
+    width: 50%;
+    margin-top: 2rem!important;
+}
+
+.url-hover {
+    font-weight: 500;
+    color: blue;
+}
+
+.url-hover:hover,
+.url-hover[click] {
+    cursor: pointer;
+    color: rgba(94, 144, 209, 0.753);
+    text-decoration: underline;
+}
+
+.note {
+    font-size: 12px;
+}

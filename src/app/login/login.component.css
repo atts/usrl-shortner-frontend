@@ -1,0 +1,39 @@
+.form-signin {
+    position: fixed;
+    width: 330px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.font-weight-normal {
+    font-weight: 400!important;
+}
+
+.mb-3,
+.my-3 {
+    width: 50%;
+    margin-top: 2rem!important;
+}
+
+.h3,
+h3 {
+    font-size: 1.75rem;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.label-link {
+    color: #00008b;
+}
+
+.label-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.label-success {
+    font-size: 12px;
+}

@@ -1,0 +1,19 @@
+<div class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal text-center">Please sign in</h1>
+    <label *ngIf="isNewUser" for="inputEmail" class="sr-only">Full Name</label>
+    <input *ngIf="isNewUser" type="text" class="form-control" placeholder="Full name" required="" autofocus="" [(ngModel)]="userData.name">
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" class="form-control" placeholder="Email address" required="" [(ngModel)]="userData.email">
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" class="form-control" placeholder="Password" required="" [(ngModel)]="userData.password">
+    <div class="mb-3">
+        <button *ngIf="isNewUser" class="btn btn-primary btn-block" type="submit" (click)="registerUser()">Sign up</button>
+        <button *ngIf="!isNewUser" class="btn btn-primary btn-block" type="submit" (click)="loginUser()">Sign in</button>
+    </div>
+    <div class="mb-3">
+        <span class="label-link" *ngIf="!isNewUser" (click)="toggleUser()">New User ?</span>
+        <span class="label-link" *ngIf="isNewUser" (click)="toggleUser()">Sign In</span>
+    </div>
+    <span class="label-success" *ngIf="isRegistered">Registeration successfull. Please login !</span>
+
+</div>
