@@ -8,7 +8,12 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "postinstall": "npm run build"
+        "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
+        "postinstall": "ng build --prod"
+    },
+    "engines": {
+        "node": "10.16.0",
+        "npm": "6.9.0"
     },
     "private": true,
     "dependencies": {
@@ -20,6 +25,8 @@
         "@angular/platform-browser": "~8.2.14",
         "@angular/platform-browser-dynamic": "~8.2.14",
         "@angular/router": "~8.2.14",
+        "express": "^4.17.1",
+        "path": "^0.12.7",
         "rxjs": "~6.4.0",
         "tslib": "^1.10.0",
         "zone.js": "~0.9.1"
