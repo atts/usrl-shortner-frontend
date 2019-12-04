@@ -9,6 +9,8 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpIntercept } from './shared/http.interceptor';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { HttpIntercept } from './shared/http.interceptor';
     HttpClientModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: HttpIntercept, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: HttpIntercept, multi: true },
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
 })
