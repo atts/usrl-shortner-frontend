@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   generateUrl(){
     const obj = {
       "originalUrl": this.sourceUrl,
-      "shortBaseUrl": "http://localhost"
+      "shortBaseUrl": "https://clip-url"
   }
     this.urlService.generateUrl(obj).subscribe(resp=>{
       console.log(resp);
